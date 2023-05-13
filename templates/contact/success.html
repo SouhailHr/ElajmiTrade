@@ -1,0 +1,302 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="Bootstrap4, Multipurpose, responsive, Business, template,Shipping, Cargo, logistic, html5, css, javascript, web24service" />
+<meta name="author" content="ELAJMI TRADE">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>ELAJMI TRADE  - Tunisian International Trade Company</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/png" href="{% static '/images/fevicon.png' %}">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{% static '/css/bootstrap.min.css'%}">
+
+<!-- Font awesome CSS -->
+<link rel="stylesheet" href="{% static '/css/fontawesome.all.min.css'%}">
+
+<!-- Animate CSS -->
+<link rel="stylesheet" href="{% static '/css/animate.min.css' %}">
+
+<!-- OwlCarousel CSS -->
+<link rel="stylesheet" href="{% static '/css/owl.carousel.min.css' %}">
+
+<!-- Magnific popup CSS -->
+<link rel="stylesheet" href="{% static '/css/fancybox.min.css' %}">
+
+<!-- chat CSS -->
+<link rel="stylesheet" href="{% static '/css/chat.css' %}">
+
+<!-- Slicknav CSS -->
+<link rel="stylesheet" href="{% static '/css/slicknav.min.css' %}">
+
+<!-- Date picker CSS -->
+<link rel="stylesheet" href="{% static '/css/bootstrap-datetimepicker.min.css' %}">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="{% static '/css/responsive.css' %}">
+
+<link rel="stylesheet" href="{% static '/css/contact.css' %}">
+
+
+<!-- jQuery -->
+<script src="{% static '/js/jquery-3.4.1.min.js' %}"></script>
+</head>
+<body>
+<!-- Main Wrapper Start -->
+<div class="main-wrapper">
+
+  <!-- skiptocontent start ( This section for blind and Google SEO, Also for page speed )-->
+  <a id="skiptocontent" href="#maincontent">skip navigation</a>
+  <!-- skiptocontent End -->
+
+<!-- Preloader start -->
+  <div class="wshipping-site-preloader-wrapper">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <div class="video-wrapper">
+    <div id="ytbg" data-youtube="https://youtu.be/IgvYjFmXmLQ"></div>
+  </div>
+  <header class="transparant-header for-sticky">
+    <!-- Header top area start -->
+    <div class="header-top-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <div class="top-contact"> <a target="_blank" href="mailto:elajmitrade@gmail.com"><i class="fa fa-envelope"></i> elajmitrade@gmail.com</a> <a href="tel:0021676220220"><i class="fa fa-phone"></i>0021676220220</a> <a href="tel:0021620801799"><i class="fa fa-mobile"></i>0021620801799</a> <a href="#"><i class="far fa-clock"></i> 8:30AM to 6:30PM</a> </div>
+          </div>
+          <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header top area End -->
+
+    <!-- Header area start -->
+    <div class="header-area">
+      <div class="container">
+        <!-- Site logo Start -->
+        <div class="logo"> <a href="index.html" title="W-shipping"><img src="{% static '/images/logo.png' %}" alt="ELAJMI TRADE"/></a> </div>
+        <!-- Site logo end -->
+        <div class="mobile-menu-wrapper"></div>
+        <!-- Search Start -->
+
+        <!-- Search End -->
+
+        <!-- Main menu start -->
+        <nav class="mainmenu">
+          <ul id="navigation">
+            <li ><a href="/">Home</a>
+            </li>
+			  <li><a href="{% url 'presentationview' %}">PRESENTATION</a>
+              </li>
+			  <li><a href="{% url 'serviceview' %}">OUR SERVICES</a>
+              </li>
+            <li><a href="{% url 'product:products' %}">OUR PRODUCTS</a>
+              <ul>
+                <li><a href="{% url 'product:products' %}">Products</a></li>
+                <li><a href="{% url 'product:product-filter' category='Agri-food' %}">Agri-food</a></li>
+                <li><a href="{% url 'product:product-filter' category='Building materials' %}">Building materials</a></li>
+                <li><a href="{% url 'product:product-filter' category='Hardware items' %}">Hardware items</a></li>
+                <li><a href="{% url 'product:product-filter' category='Sanitary facilities' %}">Sanitary facilities</a></li>
+                <li><a href="{% url 'product:product-filter' category='Hygienic & cleaning products' %}">Hygienic & cleaning products</a></li>
+                <li><a href="{% url 'product:product-filter' category='Cosmetic products' %}">Cosmetic products</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-active" ><a href="{% url 'contact:contactview' %}">Contact Us</a></li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'contact:contactlist' %}">Messages</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+        <!-- Main menu end -->
+      </div>
+    </div>
+    <!-- Header area End -->
+  </header>
+
+  <!-- Slider Start -->
+  <div class="homepage-slides-wrapper transparant-bg">
+    <div class="single-banner">
+      <!-- Slider item1 start-->
+      <div class="single-slide-item slide-bg-1">
+        <div class="item-table">
+          <div class="item-tablecell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                  <h3>We are proud</h3>
+                  <h2>To explore new opportunities to promote the Tunisian products</h2>
+                  <a href="{% url 'contact:contactview' %}" class="wshipping-button slide-btn">Contact Us</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slider item1 end-->
+    </div>
+  </div>
+  <!-- Slider End -->
+
+
+  <!-- Send free quote start -->
+  <div class="wshipping-content-block get-quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <h3>THANK YOU FOR YOUR MESSAGE ! </h3>
+          <h4>WE WILL GET BACK TO YOU AS SOON AS POSSIBLE </h4>
+         <div class="top-social bottom-social"> <a target="_blank" href="https://www.facebook.com/Elajmi-trade-103051375244455"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-whatsapp"></i></a> </div>
+          <a href="/" class="wshipping-button slide-btn">Return to homepage</a> </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Send free quote end -->
+
+
+  <!-- Our client start -->
+  <div class="wshipping-content-block client-block pt0">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+            <br>
+          <h3 class="heading3-border text-uppercase">Our Valuable Client</h3>
+        </div>
+        <div class="owl-carousel our-client">
+          <div class="client-item"><img src="{% static '/images/client-1.jpg' %}" alt=""/></div>
+          <div class="client-item"><img src="{% static '/images/client-2.jpg' %}" alt=""/></div>
+          <div class="client-item"><img src="{% static '/images/client-3.jpg' %}" alt=""/></div>
+          <div class="client-item"><img src="{% static '/images/client-4.jpg' %}" alt=""/></div>
+          <div class="client-item"><img src="{% static '/images/client-5.jpg' %}" alt=""/></div>
+          <div class="client-item"><img src="{% static '/images/client-6.jpg' %}" alt=""/></div>
+          <div class="client-item"><img src="{% static '/images/client-1.jpg' %}" alt=""/></div>
+          <div class="client-item"><img src="{% static '/images/client-2.jpg' %}" alt=""/></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Our client end -->
+
+  <!-- Footer start -->
+  <footer class="site-footer">
+    <!-- Footer Top start -->
+    <div class="footer-top-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-wiz">
+              <h3 class="footer-logo"><img src="{% static '/images/footer-logo.png' %}" alt="footer logo"/></h3>
+              <ul class="footer-contact">
+                <li><i class="fa fa-phone"></i><a href="tel:0021676220220" >0021676220220</a></li>
+                <li><i class="fa fa-mobile"></i><a href="tel:0021620801799" >0021620801799</a></li>
+                <li><i class="fa fa-envelope"></i> <a target="_blank" href="mailto:elajmitrade@gmail.com" >elajmitrade@gmail.com</a></li>
+                <li><i class="fa fa-home"></i><a target="_blank" href="https://www.google.tn/maps/place/Elajmi+trade/@34.4181594,8.7910173,17z/data=!3m1!4b1!4m5!3m4!1s0x12f897d50ca28df7:0x265a0f36353db611!8m2!3d34.4181594!4d8.793206?hl=fr">RUE ELKHANSA DOUALI 2100 GAFSA SUD GAFSA , GAFSA  ,Tunisia</a></li>
+              </ul>
+            </div>
+            <div class="top-social bottom-social"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-whatsapp"></i></a>  </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-wiz footer-menu">
+              <h3 class="footer-wiz-title">Quick Links</h3>
+              <ul>
+                <li><a href="{% url 'presentationview' %}">Presentation</a></li>
+                <li><a href="{% url 'serviceview' %}">Our Services</a></li>
+                <li><a href="{% url 'product:products' %}">Our Products</a></li>
+                <li><a href="{% url 'contact:contactview' %}">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-wiz">
+              <h3 class="footer-wiz-title">Opening Hours</h3>
+              <ul class="open-hours">
+                <li><span>Mon to Sun:</span> <span class="text-right">08:30AM to 06:30PM</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer top end -->
+
+    <!-- copyright start -->
+    <div class="footer-bottom-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6 wow fadeInLeft">Copyright © 2021 <span>ELAJMI TRADE</span>. All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+    <!-- copyright end -->
+  </footer>
+  <!-- Footer end -->
+</div>
+<!-- Main Wrapper end -->
+
+<!-- Start scroll top -->
+<div class="scrollup"><i class="fas fa-chevron-up"></i></div>
+<!-- End scroll top -->
+
+<!-- Tether JS -->
+<script src="{% static '/js/tether.min.js' %}"></script>
+
+<!-- Popper JS -->
+<script src="{% static '/js/popper.min.js' %}"></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static '/js/bootstrap.min.js' %}"></script>
+
+<!-- OwlCarousel JS -->
+<script src="{% static '/js/owl.carousel.min.js' %}"></script>
+
+<!-- Bootstrap dateTimePicker -->
+<script src="{% static '/js/datetimepicker-moment.min.js' %}"></script>
+<script src="{% static '/js/bootstrap-datetimepicker.min.js' %}"></script>
+
+<!-- SlickNav JS -->
+<script src="{% static '/js/jquery.slicknav.min.js' %}"></script>
+
+<!-- Magnific Popup JS -->
+<script src="{% static '/js/jquery.fancybox.min.js' %}"></script>
+
+<!-- WOW JS -->
+<script src="{% static '/js/wow-1.3.0.min.js' %}"></script>
+
+<!-- Step Form with validate -->
+<script src="{% static '/js/jquery.validate.js' %}"></script>
+<script src="{% static '/js/form-step.js' %}"></script>
+
+<!-- SlickNav JS -->
+<script src="{% static '/js/youtube-background.js' %}"></script>
+
+<!-- Gallery Filter -->
+<script src="{% static '/js/jquery.filterizr.min.js' %}"></script>
+
+<!-- Chat JS -->
+<script src="{% static '/js/chat.js' %}"></script>
+
+<!-- Coming Soon JS -->
+<script src="{% static '/js/coming-soon.js' %}"></script>
+
+<!-- Active JS -->
+<script src="{% static '/js/active.js' %}"></script>
+</body>
+</html>
